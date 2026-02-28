@@ -1,27 +1,14 @@
 <template>
   <header class="bg-white shadow-sm">
-    <div class="container mx-auto px-4 py-6">
+    <div class="container max-w-7xl mx-auto px-4 py-6">
       <div class="flex items-center justify-between">
-        <!-- Left side: Logo and Company Info -->
-        <div class="flex items-center space-x-4">
-          <!-- Logo Icon -->
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-          </div>
-          
-          <!-- Company Name and Tagline -->
-          <div>
-            <h1 class="text-2xl font-bold text-blue-600 uppercase tracking-tight">
-              LEGACY SOLUTIONS, LLC
-            </h1>
-            <p class="text-sm text-gray-500 mt-1">
-              24/7 Solutions for all your Business & Personal Service Needs
-            </p>
-          </div>
+        <!-- Left side: Logo -->
+        <div class="flex items-center">
+          <img 
+            src="/images/logo/logo-legacy-updated-1024x433-1.png" 
+            alt="Legacy Solutions LLC Logo" 
+            class="h-16 w-auto object-contain"
+          />
         </div>
 
         <!-- Right side: Contact Information -->
@@ -37,7 +24,7 @@
             <!-- Contact Text and Phone Number -->
             <div>
               <p class="text-sm text-gray-600 font-medium">Have Any Questions</p>
-              <a href="tel:504-638-9090" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+              <a href="tel:504-638-9090" class="text-xl md:text-2xl font-bold transition-colors hover:opacity-80" style="color: #00274D;">
                 504-638-9090
               </a>
             </div>
