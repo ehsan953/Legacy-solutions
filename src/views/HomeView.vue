@@ -1,18 +1,14 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" class="mx-auto">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="home container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center mb-8">Welcome to Legacy Solutions</h1>
+    <p class="text-center text-gray-600">Your main content goes here</p>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 export default defineComponent({
   name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
 });
 </script>

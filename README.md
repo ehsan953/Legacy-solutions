@@ -1,4 +1,4 @@
-# my-dummy-vue3-tailwind-ts-template
+# legacy-solutions
 
 ## Project setup
 ```
