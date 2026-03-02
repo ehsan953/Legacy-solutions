@@ -13,7 +13,7 @@
 
         <!-- Right Column: Text Content -->
         <div class="basis-[60%] order-2 pl-[20px] flex flex-col gap-5">
-          <h2 class="text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
+          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
             YOUR MONEY IS WAITING. LET'S BRING IT HOME
           </h2>
 

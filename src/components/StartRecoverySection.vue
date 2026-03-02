@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap">
         <!-- Left Column: Text Content -->
         <div class="basis-[59.214%] p-[10px] flex flex-col gap-5 order-2 md:order-1">
-          <h2 class="text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
+          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
             START YOUR RECOVERY TODAY
           </h2>
 

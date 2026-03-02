@@ -2,7 +2,7 @@
   <section class="bg-white">
     <div class="container max-w-3xl mx-auto flex flex-col gap-5 pt-[60px] pb-[30px]">
       <!-- Title -->
-      <h2 class="text-2xl md:text-3xl font-bold uppercase" style="color: #00274D;">
+      <h2 class="font-outfit text-2xl md:text-3xl font-bold uppercase" style="color: #00274D;">
         WHY PEOPLE CHOOSE LEGACY SOLUTIONS
       </h2>
       <div class="text-lg text-center">
@@ -56,7 +56,7 @@
     <div class="container max-w-7xl mx-auto flex flex-col gap-5 pt-[30px] pb-[60px]">
       <!-- Call to Action -->
       <div class="text-center">
-        <p class="text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-4" style="color: #00274D;">
+        <p class="font-outfit text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-4" style="color: #00274D;">
           It takes just a minute to see if you qualify. Don't leave what's yours unclaimed another day.
         </p>
       </div>

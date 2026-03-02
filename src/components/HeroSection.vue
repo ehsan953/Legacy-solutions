@@ -23,7 +23,7 @@
 
         <!-- Mobile: Text Second, Desktop: Text Left -->
         <div class="space-y-6 relative z-10 order-2 md:order-1 text-center md:text-left">
-          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight" style="color: #00274D;">
+          <h1 class="font-outfit text-3xl md:text-5xl lg:text-6xl font-bold leading-tight" style="color: #00274D;">
             CLAIM WHAT'S YOURS TODAY
           </h1>
           

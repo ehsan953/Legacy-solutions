@@ -10,7 +10,7 @@
     </div>
     <div class="relative z-10 container max-w-7xl mx-auto">
       <!-- Main Heading -->
-      <h2 class="text-2xl md:text-3xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center mb-8 md:mb-12 md:max-w-[56%] mx-auto" style="color: #00274D;">
+      <h2 class="font-outfit text-2xl md:text-3xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center mb-8 md:mb-12 md:max-w-[56%] mx-auto" style="color: #00274D;">
         THERE MAY BE MONEY WAITING FOR YOU RIGHT NOW
       </h2>
 

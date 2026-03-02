@@ -5,7 +5,7 @@
       <div class="flex flex-col md:flex-row flex-wrap">
         <!-- Left Column: FAQ Items -->
         <div class="basis-[60%] pl-[30px] pr-[20px] flex flex-col gap-5">
-          <h2 class="text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
+          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
             FREQUENTLY ASKED QUESTIONS
           </h2>
           <p class="text-[16px] text-gray-600 mb-[18px]">
@@ -43,7 +43,7 @@
                 @click="toggleFAQ(1)"
                 class="w-full flex items-center justify-between text-left"
               >
-                <h3 class="text-[16px] font-semibold text-gray-900">
+                <h3 class="font-outfittext-[16px] font-semibold text-gray-900">
                   How much does it cost?
                 </h3>
                 <svg 
@@ -68,7 +68,7 @@
                 @click="toggleFAQ(2)"
                 class="w-full flex items-center justify-between text-left"
               >
-                <h3 class="text-[16px] font-semibold text-gray-900">
+                <h3 class="font-outfit text-[16px] font-semibold text-gray-900">
                   How long does the process take?
                 </h3>
                 <svg 
@@ -93,7 +93,7 @@
                 @click="toggleFAQ(3)"
                 class="w-full flex items-center justify-between text-left"
               >
-                <h3 class="text-[16px] font-semibold text-gray-900">
+                <h3 class="font-outfit text-[16px] font-semibold text-gray-900">
                   Is my information secure?
                 </h3>
                 <svg 

@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row md:items-start md:justify-between flex-wrap">
         <!-- Left Column: Text Content -->
         <div class="basis-full md:basis-[50%] p-[10px] flex flex-col gap-5 order-2 md:order-1">
-          <h2 class="text-2xl md:text-4xl font-bold uppercase leading-snug" style="color: #00274D;">
+          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase leading-snug" style="color: #00274D;">
             START YOUR CLAIM – QUICK, SECURE, AND FREE
           </h2>
           <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
@@ -26,7 +26,7 @@
             <!-- First / Last Name -->
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   First Name <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
@@ -36,7 +36,7 @@
                 />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Last Name <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
@@ -50,7 +50,7 @@
             <!-- Email / Confirm Email -->
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Email Address <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
@@ -60,7 +60,7 @@
                 />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Confirm Email
                 </label>
                 <input
@@ -74,7 +74,7 @@
             <!-- Phone / Other Claimants -->
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfitblock text-sm font-semibold text-gray-800">
                   Phone Number <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
@@ -87,7 +87,7 @@
                 </p>
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Other Potential Claimants
                 </label>
                 <input
@@ -101,7 +101,7 @@
             <!-- Parish / Preferred Contact -->
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Parish or County (if known)
                 </label>
                 <input
@@ -111,7 +111,7 @@
                 />
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Preferred Contact Method
                 </label>
                 <input
@@ -125,7 +125,7 @@
             <!-- State / Approximate Amount -->
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   State Where Funds Are Located <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <select
@@ -136,7 +136,7 @@
                 </select>
               </div>
               <div class="space-y-2">
-                <label class="block text-sm font-semibold text-gray-800">
+                <label class="font-outfit block text-sm font-semibold text-gray-800">
                   Approximate Claim Amount
                 </label>
                 <select
@@ -154,7 +154,7 @@
 
             <!-- Type of Funds -->
             <div class="space-y-2">
-              <label class="block text-sm font-semibold text-gray-800">
+              <label class="font-outfit block text-sm font-semibold text-gray-800">
                 Type of Funds <span class="text-[#c02b0a] text-xs">(Required)</span>
               </label>
               <div class="grid grid-cols-1 gap-2 text-sm text-gray-700">
