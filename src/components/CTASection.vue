@@ -27,7 +27,7 @@
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
-                  First Name <span class="text-red-500 text-xs">(Required)</span>
+                  First Name <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
                   type="text"
@@ -37,7 +37,7 @@
               </div>
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
-                  Last Name <span class="text-red-500 text-xs">(Required)</span>
+                  Last Name <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
                   type="text"
@@ -51,7 +51,7 @@
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
-                  Email Address <span class="text-red-500 text-xs">(Required)</span>
+                  Email Address <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
                   type="email"
@@ -75,7 +75,7 @@
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
-                  Phone Number <span class="text-red-500 text-xs">(Required)</span>
+                  Phone Number <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <input
                   type="tel"
@@ -126,7 +126,7 @@
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
-                  State Where Funds Are Located <span class="text-red-500 text-xs">(Required)</span>
+                  State Where Funds Are Located <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <select
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
@@ -155,7 +155,7 @@
             <!-- Type of Funds -->
             <div class="space-y-2">
               <label class="block text-sm font-semibold text-gray-800">
-                Type of Funds <span class="text-red-500 text-xs">(Required)</span>
+                Type of Funds <span class="text-[#c02b0a] text-xs">(Required)</span>
               </label>
               <div class="grid grid-cols-1 gap-2 text-sm text-gray-700">
                 <label class="flex items-center space-x-2">
@@ -219,7 +219,7 @@
               </div>
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
-                  Who Are You Contacting Us As? <span class="text-red-500 text-xs">(Required)</span>
+                  Who Are You Contacting Us As? <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <div class="space-y-2 text-sm text-gray-700">
                   <label class="flex items-center space-x-2">
@@ -261,7 +261,7 @@
             <!-- How can we work together? -->
             <div class="space-y-2">
               <label class="block text-sm font-semibold text-gray-800">
-                How can we work together? <span class="text-red-500 text-xs">(Required)</span>
+                How can we work together? <span class="text-[#c02b0a] text-xs">(Required)</span>
               </label>
               <textarea
                 rows="3"
