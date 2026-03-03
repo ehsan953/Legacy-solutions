@@ -1,9 +1,9 @@
 <template>
-  <section class="bg-gray-50 py-8 md:py-[60px]">
+  <section ref="sectionRef" class="bg-gray-50 py-8 md:py-[60px]">
     <div class="container max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row flex-wrap">
         <!-- Left Column: Image -->
-        <div class="basis-[40%] order-1 p-[10px]">
+        <div class="fadeInLeft basis-[40%] order-1 p-[10px]">
           <img 
             src="/images/Money-is-waiting-section/YOUR-MONEY-IS-WAITING-LETS-BRING-IT-HOME.png" 
             alt="People reviewing documents"
@@ -13,26 +13,26 @@
 
         <!-- Right Column: Text Content -->
         <div class="basis-[60%] order-2 p-[10px] md:pl-[20px] flex flex-col gap-5">
-          <h2 class="font-outfit text-[28px] leading-[46px] md:text-4xl text-center md:text-left font-extrabold uppercase" style="color: #00274D;">
+          <h2 class="fadeInUp font-outfit text-[28px] leading-[46px] md:text-4xl text-center md:text-left font-extrabold uppercase" style="color: #00274D;">
             YOUR MONEY IS WAITING. LET'S BRING IT HOME
           </h2>
 
-          <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
+          <p class="fadeInUp text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             Every day, people across Louisiana and the United States miss out on funds that rightfully belong to them. These funds may be connected to property settlements, insurance payouts, 401(k)s, inheritances, and other financial assets. Many people hesitate to act because they think the process is complicated or risky. In reality, it’s simple when you work with professionals who know exactly how to get it done.
           </p>
 
-          <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
+          <p class="fadeInUp text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             At Legacy Solutions LLC, our mission is simple. We locate what’s owed, manage the process, and reunite people with their money—efficiently, securely, and without any upfront cost. Whether you recently learned about available funds or simply want to see if you qualify, there may be money waiting for you right now.
           </p>
-          <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
+          <p class="fadeInUp text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             Once you complete the form and sign electronically, we handle the recovery from start to finish. If additional information is needed, we’ll reach out by email, phone, or text. When your claim is verified, we finalize the recovery and notify you once your funds are ready.
           </p>
-          <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
+          <p class="fadeInUp text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             Legacy Solutions proudly serves all 64 Louisiana parishes and clients across the nation. Whether your recovery involves property settlements, insurance refunds, or unclaimed financial accounts, our team knows how to locate, document, and deliver results.
           </p>
 
           <!-- Feature List -->
-          <ul class="space-y-3">
+          <ul class="fadeInUp space-y-3">
             <li class="flex items-start space-x-3">
               <div class="flex-shrink-0 mt-1" style="color: #00274D;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M13.75 14.4375C13.75 14.8173 13.4423 15.125 13.0625 15.125H8.9375C8.55766 15.125 8.25 14.8173 8.25 14.4375V12.375H0V18.5625C0 19.6625 0.9625 20.625 2.0625 20.625H19.9375C21.0375 20.625 22 19.6625 22 18.5625V12.375H13.75V14.4375ZM19.9375 5.5H16.5V3.4375C16.5 2.3375 15.5375 1.375 14.4375 1.375H7.5625C6.4625 1.375 5.5 2.3375 5.5 3.4375V5.5H2.0625C0.9625 5.5 0 6.4625 0 7.5625V11H22V7.5625C22 6.4625 21.0375 5.5 19.9375 5.5ZM13.75 5.5H8.25V4.125H13.75V5.5Z" fill="#00274D"></path></svg>
@@ -78,7 +78,7 @@
           </ul>
 
           <!-- Call to Action Button -->
-          <div class="pt-4">
+          <div class="pt-4 slideInUp">
             <button class="bg-[#FF9900] text-white font-bold uppercase px-10 py-5 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-[16px] shadow-lg">
               START MY FREE FUNDS CHECK
             </button>
@@ -90,12 +90,80 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'YourMoneyWaitingSection',
+  setup() {
+    onMounted(() => {
+      const elements = document.querySelectorAll('.fadeInLeft, .fadeInUp, .slideInUp');
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target); // run once per element
+            }
+          });
+        },
+        {
+          threshold: 0.1, // triggers as soon as element starts entering
+        }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    });
+  },
 });
 </script>
-
 <style scoped>
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Initial hidden state */
+.fadeInLeft,
+.fadeInUp, .slideInUp {
+  opacity: 0;
+}
+
+/* Animation only when animate class is added */
+.animate.fadeInLeft {
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.animate.fadeInUp {
+  animation: fadeInUp 1.2s ease forwards;
+}
+.animate.slideInUp {
+  animation: slideInUp 1.2s ease forwards;
+}
 </style>

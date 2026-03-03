@@ -51,7 +51,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@keyframes appear {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -60,7 +60,7 @@ export default defineComponent({
   }
 }
 .fadeIn {
-  animation: appear 2s;
+  animation: fadeIn 2s;
 }
 @keyframes fadeInUp {
   0% {

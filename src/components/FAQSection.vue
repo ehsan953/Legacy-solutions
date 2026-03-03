@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white px-[10px] md:px-0 py-8 md:py-[60px]">
+  <section ref="sectionRef" class="bg-white px-[10px] md:px-0 py-8 md:py-[60px]">
     <div class="container max-w-7xl mx-auto">
 
       <div class="flex flex-col md:flex-row flex-wrap">
@@ -91,7 +91,7 @@
         </div>
 
         <!-- Right Column: Illustration -->
-        <div class="basis-[40%] p-[10px]">
+        <div class="fadeIn basis-[40%] p-[10px]">
           <img 
             src="/images/FAQ/FREQUENTLY-ASKED-QUESTIONS-1.png" 
             alt="FAQ illustration"
@@ -104,11 +104,30 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({
   name: 'FAQSection',
   setup() {
+    onMounted(() => {
+      const elements = document.querySelectorAll('.fadeIn');
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target); // run once per element
+            }
+          });
+        },
+        {
+          threshold: 0.1, // triggers as soon as element starts entering
+        }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    });
     const openFAQ = ref<number | null>(null);
 
     const toggleFAQ = (index: number) => {
@@ -124,4 +143,20 @@ export default defineComponent({
 </script>
 
 <style scoped>
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Hidden initially */
+.fadeIn {
+  opacity: 0;
+}
+/* Animate only when .animate is added */
+.animate.fadeIn {
+  animation: fadeIn 1.2s ease forwards;
+}
 </style>
