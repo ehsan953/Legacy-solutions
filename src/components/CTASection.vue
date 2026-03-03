@@ -1,19 +1,19 @@
 <template>
-  <section class="bg-gray-50 py-8 md:py-[60px] px-[10px] md:px-0">
+  <section ref="sectionRef" class="bg-gray-50 py-8 md:py-[60px] px-[10px] md:px-0">
     <div class="container max-w-7xl mx-auto">
       <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between flex-wrap">
         <!-- Left Column: Text Content -->
         <div class="basis-full lg:basis-[50%] p-[10px] flex flex-col gap-5">
-          <h2 class="font-outfit text-[28px] md:text-4xl font-extrabold uppercase leading-[40px] text-center md:text-left" style="color: #00274D;">
+          <h2 class="fadeInUp font-outfit text-[28px] md:text-4xl font-extrabold uppercase leading-[40px] text-center md:text-left" style="color: #00274D;">
             START YOUR CLAIM – QUICK, SECURE, AND FREE
           </h2>
-          <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
+          <p class="fadeInUp text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             Whether your funds are connected to Louisiana or another state, Legacy Solutions LLC makes it easy to recover what’s rightfully yours. There are no upfront costs, and your information remains private. Complete the brief form below to verify eligibility and start your recovery process.
           </p>
-          <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
+          <p class="fadeInUp text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             Serving all 64 Louisiana parishes and clients nationwide. Even if you’re unsure where your funds are located, our team can assist you from start to finish.
           </p>
-          <div class="md:flex md:justify-center lg:justify-start">
+          <div class="fadeInUp md:flex md:justify-center lg:justify-start">
             <img 
               src="/images/contact-section/CONTACT-FORM-SECTION-2.png" 
               alt="Contact form illustration"
@@ -23,7 +23,7 @@
         </div>
 
         <!-- Right Column: Form Card -->
-        <div class="bg-white rounded-2xl shadow-sm basis-full lg:basis-[50%] p-[25px]">
+        <div class="fadeInUp2s bg-white rounded-2xl shadow-sm basis-full lg:basis-[50%] p-[25px]">
           <form class="space-y-6">
             <!-- First / Last Name -->
             <div class="grid md:grid-cols-2 gap-4">
@@ -308,12 +308,53 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'CTASection',
+  setup() {
+    onMounted(() => {
+      const elements = document.querySelectorAll('.fadeInUp, .fadeInUp2s');
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target); // run once per element
+            }
+          });
+        },
+        {
+          threshold: 0.1, // triggers as soon as element starts entering
+        }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    });
+  },
 });
 </script>
-
 <style scoped>
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Hidden initially */
+.fadeInUp {
+  opacity: 0;
+}
+/* Animate only when .animate is added */
+.animate.fadeInUp {
+  animation: fadeInUp 1.2s ease forwards;
+}
+.animate.fadeInUp2s {
+  animation: fadeInUp 2s ease forwards;
+}
 </style>
