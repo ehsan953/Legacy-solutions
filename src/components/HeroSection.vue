@@ -59,6 +59,9 @@ export default defineComponent({
     opacity: 1;
   }
 }
+.fadeIn {
+  animation: appear 2s;
+}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -69,6 +72,10 @@ export default defineComponent({
     transform: none;
   }
 }
+.fadeInUp {
+  animation: fadeInUp 2s;
+}
+
 @keyframes slideInUp {
   0% {
     transform: translate3d(0, 100%, 0);
@@ -77,13 +84,6 @@ export default defineComponent({
   100% {
     transform: translate3d(0, 0, 0);
   }
-}
-
-.fadeIn {
-  animation: appear 2s;
-}
-.fadeInUp {
-  animation: fadeInUp 2s;
 }
 .slideInUp{
   animation: slideInUp 2s;
