@@ -10,22 +10,22 @@
     </div>
     <div class="relative z-10 container max-w-7xl mx-auto">
       <!-- Main Heading -->
-      <h2 class="font-outfit text-[28px] leading-[39.2px] md:text-3xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center mb-8 md:mb-12 md:max-w-[56%] mx-auto" style="color: #00274D;">
+      <h2 class="font-outfit text-[28px] leading-[39.2px] md:text-4xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center mb-8 md:mb-12 md:max-w-[82%] lg:max-w-[56%] mx-auto" style="color: #00274D;">
         THERE MAY BE MONEY WAITING FOR YOU RIGHT NOW
       </h2>
 
       <div class="flex flex-col gap-2 md:flex-row md:justify-between flex-wrap">
         <div class="md:basis-[59.214%] p-[10px]">
           <div class="flex flex-col gap-[20px] order-2 md:order-1">
-            <p class="text-base md:text-lg text-gray-700  text-[16px] leading-relaxed">
+            <p class="text-[#333333] text-[16px] lg:text-lg leading-relaxed">
               Every day, people across all 64 Louisiana parishes and nationwide discover funds that have been sitting unclaimed for years. It might be connected to a property settlement, an old 401(k) account, insurance payout, or even an inheritance you didn't realize was still pending.
             </p>
 
-            <p class="text-base md:text-lg text-gray-700  text-[16px] leading-relaxed">
+            <p class="text-base lg:text-lg text-gray-700  text-[16px] leading-relaxed">
               The reality is that this money belongs to you, but most people never take the final step to recover it. Some set aside the notice, others get busy, and many simply don't know where to start. That's where we come in.
             </p>
 
-            <p class="text-base md:text-lg text-gray-700  text-[16px] leading-relaxed">
+            <p class="text-base lg:text-lg text-gray-700 text-[16px] leading-relaxed">
               At Legacy Solutions LLC, our dedicated team has helped clients reclaim substantial amounts — <b>$58,000, $32,000, $78,000,</b> and <b>$16,000</b> — money that would have otherwise gone uncollected. We handle the process from start to finish, ensuring every recovery is smooth, professional, and confidential.
             </p>
 
@@ -57,7 +57,7 @@
               </li>
             </ul>
 
-            <p class="text-base text-[16px] text-gray-700 leading-relaxed mb-[10px]">
+            <p class="text-[16px] text-gray-700 leading-relaxed mb-[10px]">
               You've worked too hard to leave your money behind. Our goal is simple, to reunite you with what's rightfully yours through a secure and verified process trusted by homeowners, families, and individuals across Louisiana and beyond.
             </p>
           </div>
