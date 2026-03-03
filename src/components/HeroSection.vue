@@ -13,7 +13,7 @@
     <div class="container max-w-7xl mx-auto px-[10px] md:pt-16 md:pb-0 relative z-10">
       <div class="flex flex-col md:flex-row flex-wrap md:items-center">
         <!-- Mobile: Image First, Desktop: Image Right -->
-        <div class="md:basis-[40%] flex justify-center md:justify-end order-1 md:order-2 w-full">
+        <div class="fadeIn md:basis-[40%] flex justify-center md:justify-end order-1 md:order-2 w-full">
           <img 
             src="/images/Hero-section/Lousiana-Family-New1.png" 
             alt="Happy family with check" 
@@ -23,15 +23,15 @@
 
         <!-- Mobile: Text Second, Desktop: Text Left -->
         <div class="relative z-10 order-2 md:basis-[60%] md:order-1 text-center md:text-left flex flex-col gap-5 p-5 md:p-0">
-          <h2 class="font-outfit text-[#00274D] text-3xl md:text-4xl md:leading-[46px] font-bold uppercase leading-tight text-center md:text-left" style="color: #00274D;">
-              CLAIM WHAT'S YOURS TODAY
-            </h2>
+          <h2 class="fadeIn font-outfit text-[#00274D] text-3xl md:text-4xl md:leading-[46px] font-bold uppercase leading-tight text-center md:text-left" style="color: #00274D;">
+            CLAIM WHAT'S YOURS TODAY
+          </h2>
           
-          <p class="text-[16px] text-gray-700 leading-relaxed mb-[18px]">
+          <p class="fadeInUp text-[16px] text-gray-700 leading-relaxed mb-[18px]">
             Serving all 64 Louisiana parishes and helping clients nationwide. Whether your unclaimed funds are tied to a Louisiana property or another state, our experienced team can help recover what's rightfully yours.
           </p>
           
-          <div class="flex justify-center md:justify-start mt-[15px]">
+          <div class="slideInUp flex justify-center md:justify-start mt-[15px]">
             <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase px-6 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-base md:text-lg shadow-lg">
               START MY FREE FUNDS CHECK
             </button>
@@ -51,5 +51,41 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* Additional custom styles if needed */
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeIn {
+  animation: appear 2s;
+}
+.fadeInUp {
+  animation: fadeInUp 2s;
+}
+.slideInUp{
+  animation: slideInUp 2s;
+}
 </style>
