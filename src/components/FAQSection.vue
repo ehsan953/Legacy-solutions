@@ -1,14 +1,14 @@
 <template>
-  <section class="bg-white py-8 md:py-[60px]">
+  <section class="bg-white px-[10px] md:px-0 py-8 md:py-[60px]">
     <div class="container max-w-7xl mx-auto">
 
       <div class="flex flex-col md:flex-row flex-wrap">
         <!-- Left Column: FAQ Items -->
-        <div class="basis-[60%] pl-[30px] pr-[20px] flex flex-col gap-5">
-          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
+        <div class="basis-[60%] px-[10px] md:pl-[30px] md:pr-[20px] flex flex-col gap-5">
+          <h2 class="font-outfit text-[28px] leading-[39.2px] md:text-4xl font-bold uppercase text-center md:text-left" style="color: #00274D;">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p class="text-[16px] text-gray-600 mb-[18px]">
+          <p class="text-[16px] text-gray-600 mb-[18px] text-center md:text-left">
             Common Questions, Straight Answers
           </p>
           <div>
@@ -16,24 +16,18 @@
             <div class="bg-[#FAFBFC] rounded-lg border border-gray-200 p-5 mb-[10px]">
               <button 
                 @click="toggleFAQ(0)"
-                class="w-full flex items-center justify-between text-left"
+                class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
-                <h3 class="text-[16px] font-semibold text-gray-900">
+                <h3 class="">
                   What does Legacy Solutions LLC do?
                 </h3>
-                <svg 
-                  class="w-4 h-4 transition-transform" 
-                  :class="{ 'rotate-45': openFAQ === 0 }"
-                  style="color: #00274D;"
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
+                <span style="font-size: x-large;">
+                  <span v-if="openFAQ === 0">-</span>
+                  <span v-else>+</span>
+                </span>
               </button>
               <div v-if="openFAQ === 0" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>Legacy Solutions LLC specializes in helping individuals recover unclaimed funds, including property settlements, forgotten bank accounts, insurance payouts, 401(k) balances, and inheritances. We handle the entire recovery process on your behalf.</p>
+                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
               </div>
             </div>
   
@@ -41,24 +35,18 @@
             <div class="bg-[#FAFBFC] rounded-lg border border-gray-200 p-5 mb-[10px]">
               <button 
                 @click="toggleFAQ(1)"
-                class="w-full flex items-center justify-between text-left"
+                class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
-                <h3 class="font-outfittext-[16px] font-semibold text-gray-900">
+                <h3 class="">
                   How much does it cost?
                 </h3>
-                <svg 
-                  class="w-4 h-4 transition-transform" 
-                  :class="{ 'rotate-45': openFAQ === 1 }"
-                  style="color: #00274D;"
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
+                <span style="font-size: x-large;">
+                  <span v-if="openFAQ === 1">-</span>
+                  <span v-else>+</span>
+                </span>
               </button>
               <div v-if="openFAQ === 1" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>There are no upfront costs. Legacy Solutions LLC only gets paid when you receive your funds. Our success fee is deducted only after your claim is approved and you receive your check.</p>
+                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
               </div>
             </div>
   
@@ -66,24 +54,18 @@
             <div class="bg-[#FAFBFC] rounded-lg border border-gray-200 p-5 mb-[10px]">
               <button 
                 @click="toggleFAQ(2)"
-                class="w-full flex items-center justify-between text-left"
+                class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
-                <h3 class="font-outfit text-[16px] font-semibold text-gray-900">
+                <h3 class="">
                   How long does the process take?
                 </h3>
-                <svg 
-                  class="w-4 h-4 transition-transform" 
-                  :class="{ 'rotate-45': openFAQ === 2 }"
-                  style="color: #00274D;"
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
+                <span style="font-size: x-large;">
+                  <span v-if="openFAQ === 2">-</span>
+                  <span v-else>+</span>
+                </span>
               </button>
               <div v-if="openFAQ === 2" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>Eligibility verification typically takes 24-48 hours. Once your agreement is signed, we begin the recovery process immediately. Most steps can be completed online, making the process fast and convenient.</p>
+                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
               </div>
             </div>
   
@@ -91,24 +73,18 @@
             <div class="bg-[#FAFBFC] rounded-lg border border-gray-200 p-5 mb-[10px]">
               <button 
                 @click="toggleFAQ(3)"
-                class="w-full flex items-center justify-between text-left"
+                class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
-                <h3 class="font-outfit text-[16px] font-semibold text-gray-900">
+                <h3 class="">
                   Is my information secure?
                 </h3>
-                <svg 
-                  class="w-4 h-4 transition-transform" 
-                  :class="{ 'rotate-45': openFAQ === 3 }"
-                  style="color: #00274D;"
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
+                <span style="font-size: x-large;">
+                  <span v-if="openFAQ === 3">-</span>
+                  <span v-else>+</span>
+                </span>
               </button>
               <div v-if="openFAQ === 3" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>Yes. We use advanced encryption and strict confidentiality measures. Your information is never shared and is stored securely in compliance with industry standards.</p>
+                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
               </div>
             </div>
           </div>

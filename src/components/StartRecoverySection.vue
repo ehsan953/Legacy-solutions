@@ -1,10 +1,10 @@
 <template>
-  <section class="bg-white py-8 md:py-[60px]">
+  <section class="bg-white py-8 md:py-[60px] px-[10px] md:px-0">
     <div class="container max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap">
+      <div class="flex flex-col md:flex-row md:justify-between flex-wrap">
         <!-- Left Column: Text Content -->
-        <div class="basis-[59.214%] p-[10px] flex flex-col gap-5 order-2 md:order-1">
-          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
+        <div class="basis-[59.214%] p-[10px] flex flex-col gap-5">
+          <h2 class="font-outfit text-[28px] leading-[40px] md:text-4xl font-extrabold uppercase text-center md:text-left" style="color: #00274D;">
             START YOUR RECOVERY TODAY
           </h2>
 
@@ -22,7 +22,7 @@
         </div>
 
         <!-- Right Column: Image -->
-        <div class="basis-[40%] p-[10px] order-1 md:order-2">
+        <div class="basis-[40%] p-[10px]">
           <img 
             src="/images/Start-recovery-section/UNCLAIMED-FUNDS-COULD-BE-WAITING-1-1-1.png" 
             alt="People shaking hands"

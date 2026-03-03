@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-auto">
     <!-- Blue Bar with Copyright and Links -->
-    <div class="bg-blue-600 text-white py-4">
+    <div class="bg-[#0f75bc] text-white py-4">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
           <!-- Left: Copyright -->

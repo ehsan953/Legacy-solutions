@@ -1,10 +1,10 @@
 <template>
-  <section class="bg-gray-50 py-8 md:py-[60px]">
+  <section class="bg-gray-50 py-8 md:py-[60px] px-[10px] md:px-0">
     <div class="container max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row md:items-start md:justify-between flex-wrap">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between flex-wrap">
         <!-- Left Column: Text Content -->
-        <div class="basis-full md:basis-[50%] p-[10px] flex flex-col gap-5 order-2 md:order-1">
-          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase leading-snug" style="color: #00274D;">
+        <div class="basis-full lg:basis-[50%] p-[10px] flex flex-col gap-5">
+          <h2 class="font-outfit text-[28px] md:text-4xl font-extrabold uppercase leading-[40px] text-center md:text-left" style="color: #00274D;">
             START YOUR CLAIM – QUICK, SECURE, AND FREE
           </h2>
           <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
@@ -13,15 +13,17 @@
           <p class="text-[16px] mb-[18px] text-gray-700 leading-relaxed">
             Serving all 64 Louisiana parishes and clients nationwide. Even if you’re unsure where your funds are located, our team can assist you from start to finish.
           </p>
-          <img 
-            src="/images/contact-section/CONTACT-FORM-SECTION-2.png" 
-            alt="Contact form illustration"
-            class="max-w-[85%]"
-          />
+          <div class="md:flex md:justify-center lg:justify-start">
+            <img 
+              src="/images/contact-section/CONTACT-FORM-SECTION-2.png" 
+              alt="Contact form illustration"
+              class="max-w-[85%]"
+            />
+          </div>
         </div>
 
         <!-- Right Column: Form Card -->
-        <div class="bg-white rounded-2xl shadow-sm basis-full md:basis-[50%] p-[25px] order-1 md:order-2">
+        <div class="bg-white rounded-2xl shadow-sm basis-full lg:basis-[50%] p-[25px]">
           <form class="space-y-6">
             <!-- First / Last Name -->
             <div class="grid md:grid-cols-2 gap-4">
@@ -202,7 +204,7 @@
             </div>
 
             <!-- How Did You Hear / Who Are You Contacting As -->
-            <div class="grid md:grid-cols-2 gap-4">
+            <!-- <div class="grid md:grid-cols-2 gap-4"> -->
               <div class="space-y-2">
                 <label class="block text-sm font-semibold text-gray-800">
                   How Did You Hear About Us?
@@ -232,7 +234,7 @@
                   </label>
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
 
             <!-- Company / Website -->
             <div class="grid md:grid-cols-2 gap-4">
@@ -264,7 +266,7 @@
                 How can we work together? <span class="text-[#c02b0a] text-xs">(Required)</span>
               </label>
               <textarea
-                rows="3"
+                rows="7"
                 class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                 placeholder="Briefly explain how ?"
               ></textarea>
@@ -282,8 +284,8 @@
             </div>
 
             <!-- Next Step Notice -->
-            <div class="border-l-4 border-[#FF9900] bg-[#FFF5E6] px-3 py-3 text-xs md:text-sm text-gray-800 rounded-md">
-              <span class="font-semibold text-[#FF9900]">Next step:</span>
+            <div class="border-l-6 border-[#FF9900] bg-[#FFF5E6] px-4 py-[14px] text-xs md:text-sm text-gray-800 rounded-md">
+              <span class="font-semibold text-[#FF6600]">Next step:</span>
               <span class="ml-1">
                 You will be prompted to review and sign a secure authorization.
               </span>

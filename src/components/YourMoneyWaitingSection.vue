@@ -12,8 +12,8 @@
         </div>
 
         <!-- Right Column: Text Content -->
-        <div class="basis-[60%] order-2 pl-[20px] flex flex-col gap-5">
-          <h2 class="font-outfit text-2xl md:text-4xl font-bold uppercase" style="color: #00274D;">
+        <div class="basis-[60%] order-2 p-[10px] md:pl-[20px] flex flex-col gap-5">
+          <h2 class="font-outfit text-[28px] leading-[46px] md:text-4xl text-center md:text-left font-extrabold uppercase" style="color: #00274D;">
             YOUR MONEY IS WAITING. LET'S BRING IT HOME
           </h2>
 
@@ -79,7 +79,7 @@
 
           <!-- Call to Action Button -->
           <div class="pt-4">
-            <button class="bg-[#FF9900] text-white font-bold uppercase px-6 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-[16px] shadow-lg">
+            <button class="bg-[#FF9900] text-white font-bold uppercase px-10 py-5 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-[16px] shadow-lg">
               START MY FREE FUNDS CHECK
             </button>
           </div>
