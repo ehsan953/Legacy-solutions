@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-8 md:py-[60px]">
+  <section ref="sectionRef" class="bg-white py-8 md:py-[60px]">
     <div class="container max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row flex-wrap md:items-center">
         <!-- Mobile: Image First, Desktop: Image Left -->
@@ -40,10 +40,31 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'UnclaimedFundsSection',
+  setup() {
+    onMounted(() => {
+      const elements = document.querySelectorAll('.fadeInLeft, .fadeInUp');
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target); // run once per element
+            }
+          });
+        },
+        {
+          threshold: 0.1, // triggers as soon as element starts entering
+        }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    });
+  },
 });
 </script>
 
@@ -58,21 +79,30 @@ export default defineComponent({
     transform: none;
   }
 }
-.fadeInLeft {
-  animation: fadeInLeft 2s;
-}
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 60px, 0);
   }
   100% {
     opacity: 1;
     transform: none;
   }
 }
+
+/* Initial hidden state */
+.fadeInLeft,
 .fadeInUp {
-  animation: fadeInUp 2s;
+  opacity: 0;
+}
+
+/* Animation only when animate class is added */
+.animate.fadeInLeft {
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.animate.fadeInUp {
+  animation: fadeInUp 1.2s ease forwards;
 }
 </style>

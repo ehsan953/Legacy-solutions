@@ -1,24 +1,24 @@
 <template>
-  <section class="bg-white px-[10px] md:px-0 py-8 md:py-16">
+  <section ref="sectionRef" class="bg-white px-[10px] md:px-0 py-8 md:py-16">
     <div class="container max-w-7xl mx-auto py-[40px] md:py-[60px]">
       <div class="flex flex-col gap-[20px]">
-        <h2 class="font-outfit text-2xl md:text-3xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center md:max-w-[82%] lg:max-w-[56%] mx-auto" style="color: #00274D;">
+        <h2 class="fadeInUp font-outfit text-2xl md:text-3xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center md:max-w-[82%] lg:max-w-[56%] mx-auto" style="color: #00274D;">
           HOW THE RECOVERY PROCESS WORKS
         </h2>
   
-        <p class="lg:text-lg text-gray-700">
+        <p class="fadeInUp lg:text-lg text-gray-700">
           We've made claiming your funds simple, safe, and stress-free so you never risk losing what's rightfully yours.
         </p>
-        <p class="lg:text-lg text-gray-700">
+        <p class="fadeInUp lg:text-lg text-gray-700">
           Every day, people across all 64 Louisiana parishes and nationwide miss out on thousands of dollars because they don’t take action or file incorrectly. Many try to handle it themselves and quickly realize how complex the process can be. Claims are often rejected when self-filed because paperwork isn’t completed properly or submitted to the correct agency. Even small errors or delays can cause funds to be forfeited permanently.
         </p>
-        <p class="lg:text-lg text-gray-700">
+        <p class="fadeInUp lg:text-lg text-gray-700">
           That’s why Legacy Solutions LLC exists—to ensure your claim is handled accurately, professionally, and without the risk of costly mistakes.
         </p>
       </div>
     </div>
     <div class="container max-w-7xl mx-auto pt-[40px] md:pt-[60px]">
-      <div class="flex flex-wrap flex-col md:flex-row">
+      <div class="fadeInLeft flex flex-wrap flex-col md:flex-row">
         <div class="relative bg-[#FFFFFF] md:basis-[33%] p-[10px] flex flex-col gap-[20px]">
           <div class="flex justify-center">
             <div class="p-[25px] rounded-full text-center" style="border: 3px solid #00274D">
@@ -70,12 +70,66 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'RecoveryProcessSection',
+  setup() {
+    onMounted(() => {
+      const elements = document.querySelectorAll('.fadeInUp, .fadeInLeft');
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target); // run once per element
+            }
+          });
+        },
+        {
+          threshold: 0.1, // triggers as soon as element starts entering
+        }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    });
+  },
 });
 </script>
 
 <style scoped>
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Hidden initially */
+.fadeInUp,
+.fadeInLeft {
+  opacity: 0;
+}
+/* Animate only when .animate is added */
+.animate.fadeInUp {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.animate.fadeInLeft {
+  animation: fadeInLeft 1.2s ease forwards;
+}
 </style>
