@@ -1,8 +1,8 @@
 <template>
-  <section class="bg-white">
+  <section class="bg-white px-[10px]">
     <div class="container max-w-3xl mx-auto flex flex-col gap-5 pt-[60px] pb-[30px]">
       <!-- Title -->
-      <h2 class="font-outfit text-2xl md:text-3xl font-bold uppercase" style="color: #00274D;">
+      <h2 class="font-outfit text-2xl md:text-3xl font-bold uppercase text-center" style="color: #00274D;">
         WHY PEOPLE CHOOSE LEGACY SOLUTIONS
       </h2>
       <div class="text-lg text-center">
