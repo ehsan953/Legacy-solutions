@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-white overflow-hidden min-h-[600px]">
+  <section class="relative bg-white overflow-hidden">
     <!-- Background Elements -->
     <div class="absolute inset-0 z-0">
       <!-- Background image covering the entire section -->
@@ -10,10 +10,10 @@
       />
     </div>
 
-    <div class="container max-w-7xl mx-auto px-4 py-8 md:py-16 relative z-10">
-      <div class="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <div class="container max-w-7xl mx-auto px-[10px] md:pt-16 md:pb-0 relative z-10">
+      <div class="flex flex-col md:flex-row flex-wrap md:items-center">
         <!-- Mobile: Image First, Desktop: Image Right -->
-        <div class="flex justify-center md:justify-end order-1 md:order-2 w-full">
+        <div class="md:basis-[40%] flex justify-center md:justify-end order-1 md:order-2 w-full">
           <img 
             src="/images/Hero-section/Lousiana-Family-New1.png" 
             alt="Happy family with check" 
@@ -22,16 +22,16 @@
         </div>
 
         <!-- Mobile: Text Second, Desktop: Text Left -->
-        <div class="space-y-6 relative z-10 order-2 md:order-1 text-center md:text-left">
-          <h1 class="font-outfit text-3xl md:text-5xl lg:text-6xl font-bold leading-tight" style="color: #00274D;">
-            CLAIM WHAT'S YOURS TODAY
-          </h1>
+        <div class="relative z-10 order-2 md:basis-[60%] md:order-1 text-center md:text-left flex flex-col gap-5 p-5 md:p-0">
+          <h2 class="font-outfit text-[#00274D] text-3xl md:text-4xl md:leading-[46px] font-bold uppercase leading-tight text-center md:text-left" style="color: #00274D;">
+              CLAIM WHAT'S YOURS TODAY
+            </h2>
           
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          <p class="text-[16px] text-gray-700 leading-relaxed mb-[18px]">
             Serving all 64 Louisiana parishes and helping clients nationwide. Whether your unclaimed funds are tied to a Louisiana property or another state, our experienced team can help recover what's rightfully yours.
           </p>
           
-          <div class="flex justify-center md:justify-start">
+          <div class="flex justify-center md:justify-start mt-[15px]">
             <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase px-6 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-base md:text-lg shadow-lg">
               START MY FREE FUNDS CHECK
             </button>
