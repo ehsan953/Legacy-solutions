@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-8 md:py-16">
+  <section class="bg-white px-[10px] md:px-0 py-8 md:py-16">
     <div class="container max-w-7xl mx-auto py-[40px] md:py-[60px]">
       <div class="flex flex-col gap-[20px]">
         <h2 class="font-outfit text-2xl md:text-3xl lg:text-4xl lg:leading-[46px] font-bold uppercase text-center md:max-w-[56%] mx-auto" style="color: #00274D;">
