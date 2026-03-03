@@ -10,6 +10,7 @@
     <YourMoneyWaitingSection />
     <StartRecoverySection />
     <CTASection />
+    <LogoSliderSection />
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import StartRecoverySection from '@/components/StartRecoverySection.vue';
 import WhyPeopleChooseSection from '@/components/WhyPeopleChooseSection.vue';
 import FAQSection from '@/components/FAQSection.vue';
 import CTASection from '@/components/CTASection.vue';
+import LogoSliderSection from '@/components/LogoSliderSection.vue';
 
 export default defineComponent({
   name: 'HomeView',
@@ -38,7 +40,8 @@ export default defineComponent({
     StartRecoverySection,
     WhyPeopleChooseSection,
     FAQSection,
-    CTASection
+    CTASection,
+    LogoSliderSection
   },
 });
 </script>
