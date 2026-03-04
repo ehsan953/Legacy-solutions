@@ -2,6 +2,9 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 import TermsOfUse from '../views/TermsOfUse.vue'
+import WebsiteDisclaimer from '../views/WebsiteDisclaimer.vue'
+import SmsTerms from '../views/SmsTerms.vue'
+import SmsDisclosure from '../views/SmsDisclosure.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +29,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/terms-of-use',
     name: 'terms-of-use',
     component: TermsOfUse
+  },
+  {
+    path: '/website-disclaimer',
+    name: 'website-disclaimer',
+    component: WebsiteDisclaimer
+  },
+  {
+    path: '/sms-terms',
+    name: 'sms-terms',
+    component: SmsTerms
+  },
+  {
+    path: '/sms-disclosure',
+    name: 'sms-disclosure',
+    component: SmsDisclosure
   },
 ]
 
