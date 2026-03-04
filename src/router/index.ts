@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy.vue'
+import TermsOfUse from '../views/TermsOfUse.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,7 +21,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/privacy-policy',
     name: 'privacy-policy',
     component: PrivacyPolicy
-  }
+  },
+  {
+    path: '/terms-of-use',
+    name: 'terms-of-use',
+    component: TermsOfUse
+  },
 ]
 
 const router = createRouter({
