@@ -32,7 +32,7 @@
           </p>
           
           <div class="slideInUp flex justify-center md:justify-start mt-[15px]">
-            <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase px-6 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-base md:text-lg shadow-lg">
+            <button @click="$emit('scrollToCTA')" class="bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase px-6 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-base md:text-lg shadow-lg">
               START MY FREE FUNDS CHECK
             </button>
           </div>
@@ -47,6 +47,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'HeroSection',
+  emits: ['scrollToCTA'],
 });
 </script>
 

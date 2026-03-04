@@ -61,7 +61,7 @@
         </p>
       </div>
       <div class="slideInUp my-4 text-center text-white">
-        <button class="btn-styles">
+        <button @click="$emit('scrollToCTA')" class="btn-styles">
           START MY FREE FUNDS CHECK
         </button>
       </div>
@@ -104,6 +104,7 @@ import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'WhyPeopleChooseSection',
+  emits: ['scrollToCTA'],
   setup() {
     onMounted(() => {
       const elements = document.querySelectorAll('.fadeInUp, .slideInUp');

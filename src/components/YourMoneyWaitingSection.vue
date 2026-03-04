@@ -79,7 +79,7 @@
 
           <!-- Call to Action Button -->
           <div class="pt-4 slideInUp">
-            <button class="bg-[#FF9900] text-white font-bold uppercase px-10 py-5 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-[16px] shadow-lg">
+            <button @click="$emit('scrollToCTA')" class="bg-[#FF9900] text-white font-bold uppercase px-10 py-5 md:px-8 py-3 md:py-4 rounded-lg transition-colors text-[16px] shadow-lg">
               START MY FREE FUNDS CHECK
             </button>
           </div>
@@ -94,6 +94,7 @@ import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'YourMoneyWaitingSection',
+  emits: ['scrollToCTA'],
   setup() {
     onMounted(() => {
       const elements = document.querySelectorAll('.fadeInLeft, .fadeInUp, .slideInUp');

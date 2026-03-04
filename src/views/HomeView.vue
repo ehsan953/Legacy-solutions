@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <HeroSection />
+    <HeroSection @scrollToCTA="scrollToCTA"/>
     <UnclaimedFundsSection />
-    <WhyPeopleChooseSection />
+    <WhyPeopleChooseSection @scrollToCTA="scrollToCTA"/>
     <MoneyWaitingSection />
     <RecoveryProcessSection />
     <WhyChooseSection />
     <FAQSection />
-    <YourMoneyWaitingSection />
+    <YourMoneyWaitingSection @scrollToCTA="scrollToCTA"/>
     <StartRecoverySection />
     <CTASection />
     <!-- <LogoSliderSection /> -->
@@ -42,6 +42,14 @@ export default defineComponent({
     FAQSection,
     CTASection,
     // LogoSliderSection
+  },
+  methods: {
+    scrollToCTA() {
+      const section = document.getElementById('cta-section');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
   },
 });
 </script>

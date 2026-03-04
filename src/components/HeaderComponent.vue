@@ -3,13 +3,13 @@
     <div class="container max-w-7xl mx-auto pt-[5px]">
       <div class="flex items-center justify-between">
         <!-- Left side: Logo -->
-        <div class="flex items-center p-[10px]">
+        <router-link to="/" class="flex items-center p-[10px]">
           <img 
             src="/images/logo/logo-legacy-updated-1024x433-1.png" 
             alt="Legacy Solutions LLC Logo" 
             class="h-[42.29px] md:h-16 w-auto object-contain"
           />
-        </div>
+        </router-link>
 
         <!-- Right side: Contact Information -->
         <div class="flex items-center space-x-4 p-[10px]">
