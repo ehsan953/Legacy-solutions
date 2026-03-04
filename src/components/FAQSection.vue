@@ -27,7 +27,7 @@
                 </span>
               </button>
               <div v-if="openFAQ === 0" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
+                <p>We help individuals and businesses recover funds that may be owed to them through structured, compliant recovery services. Our team manages the research, verification, and claims process from start to finish.</p>
               </div>
             </div>
   
@@ -38,7 +38,7 @@
                 class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
                 <h3 class="">
-                  How much does it cost?
+                  Who qualifies for recovery services?
                 </h3>
                 <span style="font-size: x-large;">
                   <span v-if="openFAQ === 1">-</span>
@@ -46,7 +46,7 @@
                 </span>
               </button>
               <div v-if="openFAQ === 1" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
+                <p>Anyone who believes they may have unclaimed, misdirected, or recoverable funds can submit a request. Each case is reviewed individually and we provide clear next steps after evaluation.</p>
               </div>
             </div>
   
@@ -57,7 +57,7 @@
                 class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
                 <h3 class="">
-                  How long does the process take?
+                  Is there an upfront cost?
                 </h3>
                 <span style="font-size: x-large;">
                   <span v-if="openFAQ === 2">-</span>
@@ -65,7 +65,7 @@
                 </span>
               </button>
               <div v-if="openFAQ === 2" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
+                <p>No. Our services are performance-based. If we do not recover funds, you do not pay. Compensation is tied to successful recovery.</p>
               </div>
             </div>
   
@@ -76,7 +76,7 @@
                 class="font-outfit text-[16px] font-semibold text-[#00274d] w-full flex items-center justify-between text-left"
               >
                 <h3 class="">
-                  Is my information secure?
+                  How long does the process take?
                 </h3>
                 <span style="font-size: x-large;">
                   <span v-if="openFAQ === 3">-</span>
@@ -84,7 +84,7 @@
                 </span>
               </button>
               <div v-if="openFAQ === 3" class="mt-4 text-sm md:text-base text-gray-700">
-                <p>We help individuals, families, and businesses recover money that’s legally owed to them but often overlooked. If you’ve received notice that funds are waiting, our team confirms eligibility, prepares the claim, and completes recovery professionally and efficiently.</p>
+                <p>Timeframes vary depending on the complexity of the claim, but we begin review immediately and keep clients informed throughout the process.</p>
               </div>
             </div>
           </div>
