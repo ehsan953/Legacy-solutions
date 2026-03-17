@@ -24,7 +24,17 @@
 
         <!-- Right Column: Form Card -->
         <div class="fadeInUp2s bg-white rounded-2xl shadow-sm basis-full lg:basis-[50%] p-[25px]">
-          <form class="space-y-6">
+          <!--
+            IMPORTANT for GoHighLevel (LC Tracking) form sync:
+            - Must be a real HTML <form> submission (no JS-bound submit handler).
+            - Must include an <input type="email"> and a standard submit button.
+          -->
+          <!--
+            Use GET with a no-op action so:
+            - The browser still performs a standard HTML form submit (required for LC Tracking).
+            - Your SPA dev server isn't required to handle a POST route (avoids "Cannot POST /" errors).
+          -->
+          <form class="space-y-6" method="get" action="#">
             <!-- First / Last Name -->
             <div class="grid md:grid-cols-2 gap-4">
               <div class="space-y-2">
@@ -33,6 +43,9 @@
                 </label>
                 <input
                   type="text"
+                  name="first_name"
+                  autocomplete="given-name"
+                  required
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Enter your full legal name."
                 />
@@ -43,6 +56,9 @@
                 </label>
                 <input
                   type="text"
+                  name="last_name"
+                  autocomplete="family-name"
+                  required
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Enter your full legal name."
                 />
@@ -57,6 +73,9 @@
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Enter Email"
                 />
@@ -67,6 +86,8 @@
                 </label>
                 <input
                   type="email"
+                  name="confirm_email"
+                  autocomplete="email"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Confirm Email"
                 />
@@ -81,6 +102,9 @@
                 </label>
                 <input
                   type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  required
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Write Phone Number without +1"
                 />
@@ -94,6 +118,7 @@
                 </label>
                 <input
                   type="text"
+                  name="other_claimants"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="List any family members"
                 />
@@ -108,6 +133,7 @@
                 </label>
                 <input
                   type="text"
+                  name="parish_or_county"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Parish or County (if known)"
                 />
@@ -118,6 +144,7 @@
                 </label>
                 <input
                   type="text"
+                  name="preferred_contact_method"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Write Phone Number"
                 />
@@ -131,6 +158,8 @@
                   State Where Funds Are Located <span class="text-[#c02b0a] text-xs">(Required)</span>
                 </label>
                 <select
+                  name="funds_state"
+                  required
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                 >
                   <option>Louisiana</option>
@@ -142,6 +171,7 @@
                   Approximate Claim Amount
                 </label>
                 <select
+                  name="approx_claim_amount"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                 >
                   <option>Approximate Claim Amount</option>
@@ -161,31 +191,31 @@
               </label>
               <div class="grid grid-cols-1 gap-2 text-sm text-gray-700">
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="Property Settlement" required class="text-[#FF9900] border-gray-300" />
                   <span>Property Settlement</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="Inheritance" class="text-[#FF9900] border-gray-300" />
                   <span>Inheritance</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="Tax Sale Surplus" class="text-[#FF9900] border-gray-300" />
                   <span>Tax Sale Surplus</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="401(k) or Retirement Account" class="text-[#FF9900] border-gray-300" />
                   <span>401(k) or Retirement Account</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="Insurance Payout" class="text-[#FF9900] border-gray-300" />
                   <span>Insurance Payout</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="Expropriation or Taking" class="text-[#FF9900] border-gray-300" />
                   <span>Expropriation or Taking</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="fundType" class="text-[#FF9900] border-gray-300" />
+                  <input type="radio" name="fund_type" value="Other" class="text-[#FF9900] border-gray-300" />
                   <span>Other</span>
                 </label>
               </div>
@@ -198,6 +228,7 @@
               </label>
               <textarea
                 rows="3"
+                name="funds_description"
                 class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                 placeholder="Enter a brief description of the funds"
               ></textarea>
@@ -210,6 +241,7 @@
                   How Did You Hear About Us?
                 </label>
                 <select
+                  name="referral_source"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                 >
                   <option>Friend or Family</option>
@@ -225,11 +257,11 @@
                 </label>
                 <div class="space-y-2 text-sm text-gray-700">
                   <label class="flex items-center space-x-2">
-                    <input type="radio" name="contactAs" class="text-[#FF9900] border-gray-300" />
+                    <input type="radio" name="contacting_as" value="Individual or Family" required class="text-[#FF9900] border-gray-300" />
                     <span>Individual or Family</span>
                   </label>
                   <label class="flex items-center space-x-2">
-                    <input type="radio" name="contactAs" class="text-[#FF9900] border-gray-300" />
+                    <input type="radio" name="contacting_as" value="Business or Recovery Specialist" class="text-[#FF9900] border-gray-300" />
                     <span>Business or Recovery Specialist</span>
                   </label>
                 </div>
@@ -244,6 +276,8 @@
                 </label>
                 <input
                   type="text"
+                  name="company_name"
+                  autocomplete="organization"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Company Name"
                 />
@@ -254,6 +288,7 @@
                 </label>
                 <input
                   type="url"
+                  name="website"
                   class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                   placeholder="Website (optional)"
                 />
@@ -267,6 +302,8 @@
               </label>
               <textarea
                 rows="7"
+                name="how_can_we_work_together"
+                required
                 class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent"
                 placeholder="Briefly explain how ?"
               ></textarea>
@@ -276,6 +313,8 @@
             <div class="flex items-start space-x-3">
               <input
                 type="checkbox"
+                name="authorization"
+                required
                 class="mt-1 h-4 w-4 rounded border-gray-300 text-[#FF9900] focus:ring-[#FF9900]"
               />
               <p class="text-xs md:text-sm text-gray-700">
@@ -294,7 +333,7 @@
             <!-- Submit Button -->
             <div class="pt-2">
               <button
-                type="button"
+                type="submit"
                 class="w-full bg-[#FF9900] hover:bg-[#e58600] text-white font-bold uppercase rounded-xl py-3 md:py-4 text-sm md:text-base tracking-wide shadow-md transition-colors"
               >
                 CONTINUE TO AUTHORIZATION
